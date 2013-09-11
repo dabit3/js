@@ -1,0 +1,27 @@
+$(document).ready(function() {
+
+	function checkWindowSize() {
+    if ( $(window).width() < 450 ) {
+        $('#NDFPImage').removeClass('NDFPImage');  
+    }
+    else {
+        $('#NDFPImage').addClass('NDFPImage');        
+    }
+}
+
+function checkWindowSize2() {
+
+    if ( $(window).width() < 850 ) {       
+        $('.home-slider-wrap').addClass('NDNone');
+    }
+    else {      
+        $('.home-slider-wrap').removeClass('NDNone');
+    }
+}
+
+$(window).load(checkWindowSize);
+$(window).resize(checkWindowSize);
+$(window).load(checkWindowSize2);
+$(window).resize(checkWindowSize2);
+
+});
